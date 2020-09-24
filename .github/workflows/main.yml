@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: |
           echo Received: ${{github.event.client_payload.description}}
-          echo "# ${{github.event.client_payload.description}}" > ./README.md        
+          echo -e "# ${{github.event.client_payload.description}}" > ./README.md        
       - uses: EndBug/add-and-commit@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
