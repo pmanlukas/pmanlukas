@@ -9,12 +9,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: |
           echo Received: ${{github.event.client_payload.description}}
-      - uses: DamianReeves/write-file-action
-        with:
-          path: ${{ env.home }}/README.md
-          contents: |
-            echo "# ${{github.event.client_payload.description}}" 
-          write-mode: overwrite  
+          echo "# ${{github.event.client_payload.description}}" > ./README.md        
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update README via Siri shortcut
