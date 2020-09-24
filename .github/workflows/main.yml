@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - run: |
+          echo Received: ${{github.event.client_payload.description}}
       - uses: DamianReeves/write-file-action@v1
         with:
           path: ${{ env.home }}/README.md
