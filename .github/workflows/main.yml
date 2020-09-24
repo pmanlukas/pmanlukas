@@ -3,7 +3,7 @@ name: Siri Shortcut
 on: repository_dispatch  
 
 jobs:
-  label-issue:
+  update-readmed:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
