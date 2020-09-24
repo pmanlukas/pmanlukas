@@ -1,2 +1,1 @@
-Received: Hi there Im having fun
-echo -e # Hi there Im having fun
+# Hello world and having so much fun with GitHub actions and Siri
